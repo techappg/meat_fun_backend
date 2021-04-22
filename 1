@@ -1,0 +1,7 @@
+30 1 * * 1 root /usr/local/bin/certbot renew >>/var/log/le-renew.log
+
+#________________DB_BACKUP____________________#
+10 00 * * * /home/dbbackup/dbbackup.sh >> /home/dbbackup/dbbackup.log
+
+#--------------------meatfun order  status update------------------#
+*/15 * * * * /home/adminmeatfun/backend_roc/cron.sh >> /home/adminmeatfun/backend_roc/cron.log
